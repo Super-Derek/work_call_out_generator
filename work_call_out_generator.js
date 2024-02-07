@@ -205,13 +205,19 @@ const generateClosing = (userName = 'Your Devoted Employee', messageTone = 'sinc
     return closing;
 };
 
+//Function to combine generated greeting, body, and closing to combine into one final, random message
+//greetingTone (respectful || disrespectful || cringe), bodyTone (professional || unprofessional || weird), closingTone (sincere || rude || nonsense)
+const generateCallOut = (bossName, greetingTone, bodyTone, employeeName, closingTone) => {
+    return (`${generateGreeting(bossName, greetingTone)},\n${generateBody(bodyTone)}\n${generateClosing(employeeName, closingTone)}`);
+};
+
 
 
 
 
 
 //Tests...//
-console.log('\n\n*****************\n**********Testing...\n');
+console.log('\n\n*****************\n********Testing...\n');
 console.log(generateGreeting('Mr. Guy', 'disrespectful')); //expects Mr. Guy and random disrespectul greeting
 console.log(generateGreeting()); //expects Mr(s). Boss and random respectful greeting
 console.log(generateGreeting('Mrs. Smith')); //expects Mrs. Smith and random respectful greeting
@@ -224,3 +230,9 @@ console.log(generateClosing()); //expects rand sincere closing Your Devoted Empl
 console.log(generateClosing('Doug E. Fresh')); //expects rand sincere closing Doug E. Fresh
 console.log(generateClosing('Spaceman', 'rude')); //expects rand rude closing Spaceman
 console.log(generateClosing('Sally Face', 'nonsense')); //expects rand nonsense closing Sally Face
+console.log('\n****Final Testing...\n');
+console.log(generateCallOut() + `\n`); //expects all default values with random respectful greeting, professional body, sincere closing
+console.log(generateCallOut('Mrs. Katt', 'disrespectful', 'unprofessional', 'Skip Skipper', 'rude') + `\n`); //expects Mrs. Katt, disresp, unpro, Skip Skipper, rude
+console.log(generateCallOut('Sir Fonz', 'respectful', 'professional', 'Itsa Mee', 'sincere') + `\n`); //expects Sir Fonz, resp, pro, Itsa Mee, sincere
+console.log(generateCallOut('Bossdude', 'cringe', 'weird', 'The Dude', 'nonsense') + `\n`); //expects Bossdude, cringe, weird, The Dude, nonsense
+console.log('\n****Testing Concluded...\n');
