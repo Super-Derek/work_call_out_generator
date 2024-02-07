@@ -8,63 +8,65 @@ const generateGreeting = (bossName = 'Mr(s). Boss', messageTone = 'respectful') 
     if (messageTone === 'respectful') {
         switch (messageChoice) {
             case 0: 
-                greeting = `resgreeting1, ${bossName}`;
+                greeting = `Dear ${bossName},`;
                 break;
             case 1:
-                greeting = `resgreeting2, ${bossName}`;
+                greeting = `Hello ${bossName},`;
                 break;
             case 2:
-                greeting = `resgreeting3, ${bossName}`;
+                greeting = `Greetings to you ${bossName},`;
                 break;
             case 3:
-                greeting = `resgreeting4, ${bossName}`;
+                greeting = `Good day ${bossName},`;
                 break;
             case 4:
-                greeting = `resgreeting5, ${bossName}`;
+                greeting = `Aloha ${bossName},`;
                 break;
             default:
-                greeting = 'default';
+                greeting = 'Hello There,';
         } 
     } else if (messageTone === 'disrespectful') {
         switch (messageChoice) {
             case 0: 
-                greeting = `disgreeting1, ${bossName}`;
+                greeting = `Wussup ${bossName}-face,`;
                 break;
             case 1:
-                greeting = `disgreeting2, ${bossName}`;
+                greeting = `Yo yo ${bossName}-aroni,`;
                 break;
             case 2:
-                greeting = `disgreeting3, ${bossName}`;
+                greeting = `${bossName} My Dude,`;
                 break;
             case 3:
-                greeting = `disgreeting4, ${bossName}`;
+                greeting = `${bossName} Bruh,`;
                 break;
             case 4:
-                greeting = `disgreeting5, ${bossName}`;
+                greeting = `Bossy Mc${bossName},`;
                 break;
             default:
-                greeting = 'default';
+                greeting = 'Sup?';
         } 
     } else if (messageTone === 'cringe'){
         switch (messageChoice) {
             case 0: 
-                greeting = `cringegreeting1, ${bossName}`;
+                greeting = `Gweetins and Salutashins ${bossName},`;
                 break;
             case 1:
-                greeting = `cringegreeting2, ${bossName}`;
+                greeting = `OMG HiHi ${bossName},`;
                 break;
             case 2:
-                greeting = `cringegreeting3, ${bossName}`;
+                greeting = `uwu ${bossName},`;
                 break;
             case 3:
-                greeting = `cringegreeting4, ${bossName}`;
+                greeting = `dEaRe$t LeAdeRrr ${bossName}!!!!!111!`;
                 break;
             case 4:
-                greeting = `cringegreeting5, ${bossName}`;
+                greeting = `Ohai ${bossName},`;
                 break;
             default:
-                greeting = 'default';
+                greeting = 'Howdy Partner,';
         }
+    } else {
+        greeting = "Please submit a greeting tone of respectful, disrespectful, or cringe."
     }
     return greeting;
 };
@@ -76,63 +78,65 @@ const generateBody = (messageTone = 'professional') => {
     if (messageTone === 'professional') {
         switch (messageChoice) {
             case 0: 
-                body = `probody1`;
+                body = `I regret to inform you that I will be absent today due to personal matters.`;
                 break;
             case 1:
-                body = `probody2`;
+                body = `An unexpected issue will prevent me from arriving today. I appologize for any inconvenience.`;
                 break;
             case 2:
-                body = `probody3`;
+                body = `I am unfortunately ill today and therefore unable to go into work. I'll update you when I can return and let you know my plan to catch up on any missed business.`;
                 break;
             case 3:
-                body = `probody4`;
+                body = `I will not make it into work today. I look forward to returning tomorrow.`;
                 break;
             case 4:
-                body = `probody5`;
+                body = `I must request the day off and will make up any lost work upon my return.`;
                 break;
             default:
-                body = 'default';
+                body = 'I will be absent from work today.';
         } 
     } else if (messageTone === 'unprofessional') {
         switch (messageChoice) {
             case 0: 
-                body = `unprobody1`;
+                body = `I'm taking the day off. Got shit to do.`;
                 break;
             case 1:
-                body = `unprobody2`;
+                body = `Am I sick? Hungover? Just not feeling it? All I know is I'm staying home today.`;
                 break;
             case 2:
-                body = `unprobody3`;
+                body = `Woke up and said nope. See you tomorrow... maybe.`;
                 break;
             case 3:
-                body = `unprobody4`;
+                body = `Whatever is going around- that's what I got. Don't ask me for a doctor's note.`;
                 break;
             case 4:
-                body = `unprobody5`;
+                body = `Spending the day applying to other jobs. Might be in tomorrow.`;
                 break;
             default:
-                body = 'default';
+                body = `I'm staying in bed today.`;
         } 
     } else if (messageTone === 'weird'){
         switch (messageChoice) {
             case 0: 
-                body = `weirdbody1`;
+                body = `So, this is awkward, but the ghost of my third grade teacher told me not to go into work today. I'll announce my return after my consult with the exorcist.`;
                 break;
             case 1:
-                body = `weirdbody2`;
+                body = `I had some stuff come out of me that I'm pretty sure never went into me, so I think I have to stay home and monitor the situation.`;
                 break;
             case 2:
-                body = `weirdbody3`;
+                body = `I won't be at work today. I also won't be home. If anyone asks about me, you don't know anything. 7-16-42-3.`;
                 break;
             case 3:
-                body = `weirdbody4`;
+                body = `I pulled a real bad Tarot card this morning. REAL bad. I'm staying in bed.`;
                 break;
             case 4:
-                body = `weirdbody5`;
+                body = `The black crows cry out our unspoken desires. For me, they cry STAY HOME. Caw!`;
                 break;
             default:
-                body = 'default';
+                body = 'Time is an illusion. Today does not exist for me.';
         }
+    } else {
+        body = "Please submit a body tone of professional, unprofessional, or weird."
     }
     return body;
 };
@@ -144,63 +148,65 @@ const generateClosing = (userName = 'Your Devoted Employee', messageTone = 'sinc
     if (messageTone === 'sincere') {
         switch (messageChoice) {
             case 0: 
-                closing = `sincereclosing1 ${userName}`;
+                closing = `Sincerely,\n ${userName}`;
                 break;
             case 1:
-                closing = `sincereclosing2 ${userName}`;
+                closing = `Kind Regards,\n ${userName}`;
                 break;
             case 2:
-                closing = `sincereclosing3 ${userName}`;
+                closing = `Have a Good Day,\n ${userName}`;
                 break;
             case 3:
-                closing = `sincereclosing4 ${userName}`;
+                closing = `Thank You,\n ${userName}`;
                 break;
             case 4:
-                closing = `sincereclosing5 ${userName}`;
+                closing = `Take Care,\n ${userName}`;
                 break;
             default:
-                closing = 'default';
+                closing = 'Regards';
         } 
     } else if (messageTone === 'rude') {
         switch (messageChoice) {
             case 0: 
-                closing = `rudeclosing1 ${userName}`;
+                closing = `Peace Out,\n ${userName}`;
                 break;
             case 1:
-                closing = `rudeclosing2 ${userName}`;
+                closing = `See Ya!\n ${userName}, The Real Boss`;
                 break;
             case 2:
-                closing = `rudeclosing3 ${userName}`;
+                closing = `Don't Call Me,\n ${userName}`;
                 break;
             case 3:
-                closing = `rudeclosing4 ${userName}`;
+                closing = `Piss Off,\n ${userName}`;
                 break;
             case 4:
-                closing = `rudeclosing5 ${userName}`;
+                closing = `K.\n ${userName} ╭∩╮(︶︿︶)╭∩╮`;
                 break;
             default:
-                closing = 'default';
+                closing = '-Me';
         } 
     } else if (messageTone === 'nonsense'){
         switch (messageChoice) {
             case 0: 
-                closing = `nonclosing1 ${userName}`;
+                closing = `Adieudly-doo,\n Captain ${userName}`;
                 break;
             case 1:
-                closing = `nonclosing2 ${userName}`;
+                closing = `Brontosaurus Apatosaurus,\n ${userName}asaurus`;
                 break;
             case 2:
-                closing = `nonclosing3 ${userName}`;
+                closing = `Areevadarchee,\n ${userName}`;
                 break;
             case 3:
-                closing = `nonclosing4 ${userName}`;
+                closing = `As the Wind Blows,\n ${userName} of the Forest`;
                 break;
             case 4:
-                closing = `nonclosing5 ${userName}`;
+                closing = `Oh Canada!\n ${userName}`;
                 break;
             default:
-                closing = 'default';
+                closing = '-Like Grains of Sand';
         }
+    } else {
+        closing = "Please submit a closing tone of sincere, rude, or nonsense."
     }
     return closing;
 };
@@ -208,7 +214,7 @@ const generateClosing = (userName = 'Your Devoted Employee', messageTone = 'sinc
 //Function to combine generated greeting, body, and closing to combine into one final, random message
 //greetingTone (respectful || disrespectful || cringe), bodyTone (professional || unprofessional || weird), closingTone (sincere || rude || nonsense)
 const generateCallOut = (bossName, greetingTone, bodyTone, employeeName, closingTone) => {
-    return (`${generateGreeting(bossName, greetingTone)},\n${generateBody(bodyTone)}\n${generateClosing(employeeName, closingTone)}`);
+    return (`${generateGreeting(bossName, greetingTone)}\n${generateBody(bodyTone)}\n\n${generateClosing(employeeName, closingTone)}`);
 };
 
 
