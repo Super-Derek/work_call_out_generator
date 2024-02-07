@@ -137,7 +137,73 @@ const generateBody = (messageTone = 'professional') => {
     return body;
 };
 
-
+//Function to generate a random closing message based on message tone preference
+//Input desired tone (sincere || rude || nonsense) and userName
+const generateClosing = (userName = 'Your Devoted Employee', messageTone = 'sincere') => {
+    const messageChoice = Math.floor(Math.random() * 5); //generates random number from 0-4
+    if (messageTone === 'sincere') {
+        switch (messageChoice) {
+            case 0: 
+                closing = `sincereclosing1 ${userName}`;
+                break;
+            case 1:
+                closing = `sincereclosing2 ${userName}`;
+                break;
+            case 2:
+                closing = `sincereclosing3 ${userName}`;
+                break;
+            case 3:
+                closing = `sincereclosing4 ${userName}`;
+                break;
+            case 4:
+                closing = `sincereclosing5 ${userName}`;
+                break;
+            default:
+                closing = 'default';
+        } 
+    } else if (messageTone === 'rude') {
+        switch (messageChoice) {
+            case 0: 
+                closing = `rudeclosing1 ${userName}`;
+                break;
+            case 1:
+                closing = `rudeclosing2 ${userName}`;
+                break;
+            case 2:
+                closing = `rudeclosing3 ${userName}`;
+                break;
+            case 3:
+                closing = `rudeclosing4 ${userName}`;
+                break;
+            case 4:
+                closing = `rudeclosing5 ${userName}`;
+                break;
+            default:
+                closing = 'default';
+        } 
+    } else if (messageTone === 'nonsense'){
+        switch (messageChoice) {
+            case 0: 
+                closing = `nonclosing1 ${userName}`;
+                break;
+            case 1:
+                closing = `nonclosing2 ${userName}`;
+                break;
+            case 2:
+                closing = `nonclosing3 ${userName}`;
+                break;
+            case 3:
+                closing = `nonclosing4 ${userName}`;
+                break;
+            case 4:
+                closing = `nonclosing5 ${userName}`;
+                break;
+            default:
+                closing = 'default';
+        }
+    }
+    return closing;
+};
 
 
 
@@ -154,3 +220,7 @@ console.log(generateBody()); //expects rand pro body
 console.log(generateBody('professional')); //expects random pro body
 console.log(generateBody('unprofessional')); //expects rand unpro body
 console.log(generateBody('weird')); //expects rand weird body
+console.log(generateClosing()); //expects rand sincere closing Your Devoted Employee
+console.log(generateClosing('Doug E. Fresh')); //expects rand sincere closing Doug E. Fresh
+console.log(generateClosing('Spaceman', 'rude')); //expects rand rude closing Spaceman
+console.log(generateClosing('Sally Face', 'nonsense')); //expects rand nonsense closing Sally Face
